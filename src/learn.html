@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" charset="utf-8" src="jquery-3.2.1.js"></script>
+
+</head>
+<body>
+<button id="add">添加</button>
+<p id="a"></p>
+<p id="b"></p>
+</body>
+<script type="text/javascript">
+    $(function () {
+
+        var todo = localStorage.getItem("todo");
+        todo = JSON.parse(todo);
+        for (i = 0; i < todo.length; i++) {
+            $('body').append('<p id="a">' + todo[i].value + '</p>');
+        }
+
+    });
+    $('#add').on('click', function () {
+        $('body').append('<p id="a">1</p>');
+        save();
+    })
+
+    function save() {
+        var a = localStorage.getItem("todo");
+        if (!a) {
+            var todo = [];
+            todo.unshift({'value': '1'});
+            todo = JSON.stringify(todo);
+            localStorage.setItem("todo", todo);
+        } else {
+            var todo = a;
+            todo = JSON.parse(todo);
+            todo.unshift({'value': '1'});
+            todo = JSON.stringify(todo);
+            localStorage.setItem("todo", todo);
+        }
+
+
+    }
+
+    $('body').on('click', '#a', function () {
+        alert('11')
+    })
+
+
+</script>
+</html>

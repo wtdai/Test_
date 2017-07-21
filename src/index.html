@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <title>1</title>
+    <style>
+        .h1 {font-size:30px;color:black;padding:10px;text-align: center}
+        .form-inline{margin-left: 100px;}
+        .form-control{width: 100px!important;}
+        .table.table-bordered{ width: 80%; margin: 20px auto;}
+        .table.table-bordered th{text-align: center}
+        .table.table-bordered td{text-align: center}
+    </style>
+</head>
+<body>
+<div class="h1">DOMAIN接口监控--case选择运行</div>
+<div>
+    <form class="form-inline">
+        <div class="form-group">
+            <label >运行环境</label>
+            <select class="form-control" >
+                <option>fat369</option>
+                <option>fat39</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-default">运行</button>
+    </form>
+
+    <table class="table table-bordered">
+        <tr>
+            <th width="5%">选择</th>
+            <th width="5%">编号</th>
+            <th width="25%">case名称</th>
+            <th width="10%">运行状态</th>
+            <th width="30%">运行结果</th>
+            <th width="10%">运行时间</th>
+            <th>操作</th>
+        </tr>
+        <tr >
+            <td class="select1" ><input  type="checkbox" class="checkbox1"></td>
+            <td >1</td>
+            <td>城市接口</td>
+            <td>运行中</td>
+            <td>对比失败，结果链接 ：<a href="m.ctrip.com">url链接</a></td>
+            <td>时间</td>
+            <td>
+                <button type="button" class="btn btn-primary btn-sm">修改</button>
+                <button type="button" class="btn btn-primary btn-sm" style="background-color: red">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="select1" ><input  type="checkbox" class="checkbox1"></td>
+            <td >1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <button type="button" class="btn btn-primary btn-sm">修改</button>
+                <button type="button" class="btn btn-primary btn-sm" style="background-color: red">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="select1" ><input  type="checkbox" class="checkbox1"></td>
+            <td >1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <button type="button" class="btn btn-primary btn-sm">修改</button>
+                <button type="button" class="btn btn-primary btn-sm" style="background-color: red">删除</button>
+            </td>
+        </tr>
+
+    </table>
+
+
+
+</div>
+
+
+</body>
+</html>
