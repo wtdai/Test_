@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+    <script type="text/javascript" charset="utf-8" src="jquery.js"></script>
+    <meta name="viewport"
+          content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+</head>
+<body>
+<p data-id="1">1
+    <button class="up">上</button>
+    <button class="down">下</button>
+</p>
+<p data-id="2">2
+    <button class="up">上</button>
+    <button class="down">下</button>
+</p>
+<p data-id="3">3
+    <button class="up">上</button>
+    <button class="down">下</button>
+</p>
+<p data-id="4">4
+    <button class="up">上</button>
+    <button class="down">下</button>
+</p>
+<p data-id="5">5
+    <button class="up">上</button>
+    <button class="down">下</button>
+</p>
+
+</body>
+
+<script>
+
+
+    $('body').on('click', '.up', function () {
+
+        var self = $(this),
+                upData = self.parent(), //获取整个一行DOM
+                ps = upData.prev(), //上一个元素
+
+                clickindex = self.parent().index();
+        if (!!clickindex) { //不是第一个
+            upData.remove();
+            $(ps).before(upData);
+        } else {
+        }
+    })
+
+
+
+    $('body').on('click', '.down', function () {
+        var arr = $('p');
+        var self = $(this),
+                upData = self.parent(), //获取整个一行DOM
+                ps = upData.next(), //下一个元素
+                //  clickid = self.parent().data('id'),
+                clickindex = self.parent().index();
+
+        if ( clickindex <arr.length) {  //索引与总的P的长度比较
+            upData.remove();
+            $(ps).after(upData); //插到下一个
+        } else {
+        }
+    })
+
+
+</script>
+</html>
